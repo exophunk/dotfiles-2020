@@ -3,24 +3,26 @@ tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
+tap 'buo/cask-upgrade'
 
 
 # Utilities
-brew 'coreutils'          # macOS coreutils is outdated
-brew 'ffmpeg'             # video manipulation
-brew 'figlet'             # text to ascii art
-brew 'git'                # git version control
-brew 'httpie'             # rest http request sender
-brew 'hub'                # improved github commands
-brew 'm-cli'              # macOS cli tool
-brew 'mackup'             # app & os configuration backup tool
-brew 'nmap'               # network tools
-brew 'rename'             # renaming tool
-brew 'tree'               # show directory as tree
-brew 'wifi-password'      # show password of current wifi
-brew 'youtube-dl'         # download youtube vid
-brew 'mas'                # mac App Store manager
-brew 'cu'                 # brew Cask Updater
+brew 'coreutils'          # Mac OS Coreutils is Outdated
+brew 'ffmpeg'             # Video Manipulation
+brew 'figlet'             # Text to Ascii Art
+brew 'git'                # Git Version Control
+brew 'httpie'             # Rest Http Request Sender
+brew 'hub'                # Improved Github Commands
+brew 'm-cli'              # Mac OS Cli Tool
+brew 'mackup'             # App OS Configuration Backup Tool
+brew 'nmap'               # Network Tools
+brew 'rename'             # Renaming Tool
+brew 'tree'               # Show Directory as Tree
+brew 'wifi-password'      # Show Password of Current Wifi
+brew 'youtube-dl'         # Download Youtube Vid
+brew 'mas'                # Mac App Store Manager
+brew 'nano'               # Console Text Editor
+brew 'brew-php-switcher'  # Tool to easily switch PHP versions
 
 # Image Tools
 brew 'jpegoptim'
@@ -30,52 +32,56 @@ brew 'svgo'
 brew 'gifsicle'
 brew 'imagemagick'
 
-
 # Development
-brew 'php'
-brew 'php@7.3'
-brew 'php@7.2'
+brew 'php@7.4', link: false
+brew 'php@7.2', link: false
+brew 'php@7.3', restart_service: true, link: true
 brew 'composer'
 brew 'mariadb'
 brew 'redis'
+brew 'nginx'
+brew 'dnsmasq'
 
 # Apps
 cask '1password'            # Password Manager
+cask 'adobe-creative-cloud' # Adobe Tools
 cask 'alfred'               # Task Runner
 cask 'appcleaner'           # Clean Apps
 cask 'bartender'            # Organize MacOS Bar
 cask 'beamer'               # Stream to AppleTV
+cask 'ccleaner'             # System Cleaner
 cask 'colorsnapper'         # Pick Colors on screen
-cask 'adobe-creative-cloud' # Adobe Tools
-cask 'sound-control'        # Control Sound Output
-cask 'firefox'              # Browser
-cask 'google-chrome'        # Browser
-cask 'imageoptim'           # Image Optimization
-cask 'java'                 # Java Environment
 cask 'daisydisk'            # Analyze Disk usage
 cask 'dash'                 # Dev Docs
 cask 'dropbox'              # File Cloud
-cask 'flash-player          # Stupid old flash
-cask 'harvest               # Time tracking
-cask 'istat-menus           # CPU & RAM Usage etc
-cask 'iterm2                # Terminal
-cask 'kap                   # Screen Capture
+cask 'firefox'              # Browser
+cask 'flash-player'         # Stupid old flash
+cask 'google-chrome'        # Browser
+cask 'harvest'              # Time tracking
+cask 'imageoptim'           # Image Optimization
+cask 'istat-menus'          # CPU & RAM Usage etc
+cask 'iterm2'               # Terminal
+cask 'java'                 # Java Environment
+cask 'kap'                  # Screen Capture
 cask 'microsoft-excel'      # MS Office Excel
 cask 'microsoft-word'       # MS Office Word
 cask 'namechanger'          # Bulk renaming utility
+cask 'postman'              # API Request Tool
 cask 'protonmail-bridge'    # ProtonMail Client Bridge
-cask 'protonvpn'	    # Proton VPN client
+cask 'protonvpn'            # Proton VPN client
 cask 'recordit'             # Quick Screen capture
 cask 'sequel-pro'           # DB managment
+cask 'signal'               # Messenger
+cask 'sketch'               # Design App
 cask 'skype'                # Communication
-cask 'sonos'                # Speaker control
+cask 'slack'                # Communication
+cask 'sound-control'        # Control Sound Output
+cask 'sourcetree'           # Git UI
 cask 'spectacle'            # Window management with keys
 cask 'spotify'              # Sound App
 cask 'standard-notes'       # Privacy Notes App 
-cask 'teamviewer'           # Remote control
-cask 'whatsapp'             # Messenger
-cask 'slack'                # Communication
 cask 'sublime-text'         # Coding editor
+cask 'teamviewer'           # Remote control
 cask 'telegram-desktop'     # Messenger
 cask 'the-unarchiver'       # Zipfile tool
 cask 'tinkerwell'           # PHP Live Editor
@@ -85,9 +91,7 @@ cask 'transmit'             # FTP Client
 cask 'visual-studio-code'   # Coding Editor
 cask 'vlc'                  # Video Player
 cask 'whatsapp'             # Messenger
-cask 'postman'              # API Request Tool
-cask 'sketch'               # Design App
-cask 'sourcetree'           # Git UI
+cask 'zwift'                # VR cycling
 
 # Quicklook
 cask 'qlcolorcode'          # For colored code
@@ -113,4 +117,4 @@ mas 'Giphy Capture', id: 668208984
 mas 'Keynote', id: 409183694
 mas 'Numbers', id: 409203825
 mas 'Spark', id: 1176895641
-mas 'Memory Clean 2', id: 1114591412
+mas 'Memory Diag', id: 748212890
