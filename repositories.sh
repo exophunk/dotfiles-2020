@@ -22,10 +22,12 @@ hub clone sb13-onlinespiel2020
 hub clone sp01-sp
 hub clone tl01-timelines
 
-# Projects
+# Tools
 cd $TOOLS
 hub clone y7ksoftware/cli
 
-# Projects
-cd $TOOLS
+# Personal Projects
+cd $PERSONAL
 hub clone ch01-charades
+hub clone y7k-smashbros
+hub clone robertkrieg
