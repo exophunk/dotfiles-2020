@@ -1,6 +1,6 @@
 export USER=exophunk
 export DOTFILES=$HOME/.dotfiles
-export ZSH=${USER}/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 export LANG=de_CH.UTF-8
 export UPDATE_ZSH_DAYS=5
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
@@ -11,17 +11,18 @@ ZSH_THEME="af-magic"
 HIST_STAMPS="dd.mm.yyyy"
 
 # Enable completions
-autoload -Uz compinit && compinit
+# autoload -Uz compinit && compinit 
 
 # Disable autocorrection
 unsetopt correct_all
-
+ 
 # zsh-nvm options
+export NVM_COMPLETION=true
 export NVM_AUTO_USE=true
 export NVM_LAZY_LOAD=true
 
 # Load more ZSH Config files
-ZSH_CUSTOM=$DOTFILES/configs/zsh
+ZSH_CUSTOM=$DOTFILES/zsh/custom
 
 plugins=(
     git

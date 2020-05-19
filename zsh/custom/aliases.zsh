@@ -16,12 +16,15 @@ alias projects="cd $HOME/workspace/freelancing/projects"
 
 # PHP
 alias cfresh="rm -rf vendor/ composer.lock && composer i"
-alias usephp74='valet stop && valet use php@7.4 && sudo brew services stop php@7.2 && sudo brew services stop php@7.3 && valet start'
-alias usephp73='valet stop && valet use php@7.3 && sudo brew services stop php@7.2 && sudo brew services stop php && valet start'
-alias usephp72='valet stop && valet use php@7.2 && sudo brew services stop php && sudo brew services stop php@7.3 && valet start'
+alias usephp74='brew-php-switcher 7.4 -c=valet'
+alias usephp73='brew-php-switcher 7.3 -c=valet'
+alias usephp72='brew-php-switcher 7.2 -c=valet'
+
+
+
 
 # JS
-alias nfresh="rm -rf node_modules/ package-lock.json && npm install"
+alias nfresh="rm -rf node_modules/ package-lock.json && nvm use && npm install"
 alias nwatch="nvm use && npm run watch"
 alias ndev="nvm use && npm run dev"
 
