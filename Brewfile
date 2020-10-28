@@ -4,6 +4,7 @@ tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
 tap 'buo/cask-upgrade'
+tap 'heroku/brew'
 
 
 # Utilities
@@ -23,6 +24,11 @@ brew 'youtube-dl'         # Download Youtube Vid
 brew 'mas'                # Mac App Store Manager
 brew 'nano'               # Console Text Editor
 brew 'brew-php-switcher'  # Tool to easily switch PHP versions
+brew 'fabianishere/personal/pam_reattach' # Requirement to have TouchID for Sudo in Terminal, https://github.com/fabianishere/pam_reattach
+brew 'awscli'             # CLI for AWS
+brew 'certbot'            # CLI to handle SSL certificates
+brew 'heroku'             # CLI for Heroku
+
 
 # Image Tools
 brew 'jpegoptim'
@@ -33,9 +39,9 @@ brew 'gifsicle'
 brew 'imagemagick'
 
 # Development
-brew 'php@7.4', link: false
+brew 'php@7.4', restart_service: true, link: true
 brew 'php@7.2', link: false
-brew 'php@7.3', restart_service: true, link: true
+brew 'php@7.3', link: false
 brew 'composer'
 brew 'mariadb'
 brew 'redis'
@@ -49,7 +55,7 @@ cask 'alfred'               # Task Runner
 cask 'appcleaner'           # Clean Apps
 cask 'bartender'            # Organize MacOS Bar
 cask 'beamer'               # Stream to AppleTV
-cask 'ccleaner'             # System Cleaner
+cask 'cleanmymac'           # System Cleaner
 cask 'colorsnapper'         # Pick Colors on screen
 cask 'daisydisk'            # Analyze Disk usage
 cask 'dash'                 # Dev Docs
@@ -57,12 +63,12 @@ cask 'dropbox'              # File Cloud
 cask 'firefox'              # Browser
 cask 'flash-player'         # Stupid old flash
 cask 'google-chrome'        # Browser
-cask 'harvest'              # Time tracking
 cask 'imageoptim'           # Image Optimization
 cask 'istat-menus'          # CPU & RAM Usage etc
 cask 'iterm2'               # Terminal
 cask 'java'                 # Java Environment
 cask 'kap'                  # Screen Capture
+cask 'microsoft-auto-update'# MS Auto Update
 cask 'microsoft-excel'      # MS Office Excel
 cask 'microsoft-word'       # MS Office Word
 cask 'namechanger'          # Bulk renaming utility
@@ -79,7 +85,7 @@ cask 'sound-control'        # Control Sound Output
 cask 'sourcetree'           # Git UI
 cask 'spectacle'            # Window management with keys
 cask 'spotify'              # Sound App
-cask 'standard-notes'       # Privacy Notes App 
+cask 'standard-notes'       # Privacy Notes App
 cask 'sublime-text'         # Coding editor
 cask 'teamviewer'           # Remote control
 cask 'telegram-desktop'     # Messenger
@@ -90,8 +96,12 @@ cask 'transmission'         # Torrent Tool
 cask 'transmit'             # FTP Client
 cask 'visual-studio-code'   # Coding Editor
 cask 'vlc'                  # Video Player
+cask 'webponize'            # WebP Converter
 cask 'whatsapp'             # Messenger
+cask 'wkhtmltopdf'          # CLI PDF Generator
+cask 'zoom'                 # Video chat
 cask 'zwift'                # VR cycling
+
 
 # Quicklook
 cask 'qlcolorcode'          # For colored code
@@ -118,3 +128,5 @@ mas 'Keynote', id: 409183694
 mas 'Numbers', id: 409203825
 mas 'Spark', id: 1176895641
 mas 'Memory Diag', id: 748212890
+mas 'HEIC Converter', id: 1294126402
+mas 'Harvest', id: 506189836
