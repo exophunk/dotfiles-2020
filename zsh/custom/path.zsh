@@ -11,4 +11,4 @@ export PATH="$HOME/.node/bin:$PATH"
 export PATH="node_modules/.bin:vendor/bin:$PATH"
 
 # Add Google App Engine
-export PATH="$USER/google_appengine:$PATH"
+export PATH="$USER/bin/google_appengine:$PATH"

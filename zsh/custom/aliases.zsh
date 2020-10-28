@@ -7,24 +7,20 @@ alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
 alias c="clear"
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
-
-
+alias zsc='code ~/.dotfiles/dotfiles.code-workspace'
 
 # Directories
 alias dotfiles="cd $DOTFILES"
 alias projects="cd $HOME/workspace/freelancing/projects"
 
 # PHP
-alias cfresh="rm -rf vendor/ composer.lock && composer i"
+alias cfresh="rm -rf vendor/ && composer i"
 alias usephp74='brew-php-switcher 7.4 -c=valet'
 alias usephp73='brew-php-switcher 7.3 -c=valet'
 alias usephp72='brew-php-switcher 7.2 -c=valet'
 
-
-
-
 # JS
-alias nfresh="rm -rf node_modules/ package-lock.json && nvm use && npm install"
+alias nfresh="rm -rf node_modules/ && nvm use && npm install"
 alias nwatch="nvm use && npm run watch"
 alias ndev="nvm use && npm run dev"
 
@@ -46,7 +42,7 @@ alias copyfilelist='ls|pbcopy'
 # Updating
 alias updatemacos='softwareupdate -ia'
 alias updatemacapps='mas upgrade'
-alias updatebrews='brew update && brew upgrade && brew cu --all --cleanup --yes && brew doctor && brew cleanup -s && rm -rf "$(brew --cache)"'
+alias updatebrews='brew update && brew upgrade && brew cu --all --cleanup --yes && brew cleanup -s && rm -rf "$(brew --cache)"'
 alias updateglobalnpm='npm --global update'
 alias updateglobalcomposer='composer global update'
-alias updateall='updatemacos && updatemacapps && updatebrews && updateglobalnpm && updateglobalcomposer'
+alias updateall='updatemacos ; updatemacapps ; updatebrews ; updateglobalnpm ; updateglobalcomposer'
